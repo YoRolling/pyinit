@@ -1,0 +1,20 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[dev-packages]
+
+
+
+[packages]
+
+click = "==6.7"
+prompt-toolkit = "==1.0.15"
+pygments = "==2.2.0"
+regex = "==2018.2.21"
+wcwidth = "==0.1.7"
+whaaaaat = "==0.5.2"
+licen = "*"
