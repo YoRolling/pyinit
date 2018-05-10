@@ -1,39 +1,44 @@
-$project
+Pyinit
 ========
 
-$project will solve your problem of where to start with documentation,
-by providing a basic explanation of how to do it easily.
+`Pyinit` will help you to easily create a package folder and init some basic config.
 
 Look how easy it is to use:
 
-    import project
-    # Get your stuff done
-    project.do_stuff()
+```shell
+pyinit create
+```
 
 Features
 --------
 
 - Be awesome
-- Make things faster
+- Make package easily
+- Use template recommend by 
 
 Installation
 ------------
 
-Install $project by running:
+Install pyinit by running:
 
-    install project
+    pip install pyinit
+
+Usage
+------------
+It's too easy to use, all you need is run `pyinit create` and answer some question 。    
+That's all done！
 
 Contribute
 ----------
 
-- Issue Tracker: github.com/$project/$project/issues
-- Source Code: github.com/$project/$project
+- Issue Tracker: https://github.com/YoRolling/pyinit/issues
+- Source Code: https://github.com/YoRolling/pyinit
 
 Support
 -------
 
-If you are having issues, please let us know.
-We have a mailing list located at: project@google-groups.com
+If you are having issues, please let us know.  
+PR & Issues is Welcome.
 
 License
 -------
