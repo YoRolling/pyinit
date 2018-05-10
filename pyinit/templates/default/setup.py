@@ -7,14 +7,13 @@ except IOError:
     long_description = ""
 
 setup(
-    name="pyinit",
-    version="0.1.0",
+    name="{{name}}",
+    version="{{version}}",
     description="A pip package",
-    license="MIT",
-    author="YoRolling",
+    license="{{license}}",
+    author="{{author}}",
     packages=find_packages(),
     install_requires=[
-        'Click'
     ],
     long_description=long_description,
     classifiers=[
@@ -22,7 +21,5 @@ setup(
         "Programming Language :: Python :: 2.7",
     ],
     entry_points="""
-        [console_scripts]
-        pyinit=pyinit.index:cli
     """
 )

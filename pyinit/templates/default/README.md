@@ -26,8 +26,8 @@ Install {{moduleName}} by running:
 Contribute
 ----------
 
-- Issue Tracker: github.com/{{moduleName}}/{{moduleName}}/issues
-- Source Code: github.com/{{moduleName}}/{{moduleName}}
+- Issue Tracker: github.com/{{author}}/{{moduleName}}/issues
+- Source Code: github.com/{{author}}/{{moduleName}}
 
 Support
 -------
