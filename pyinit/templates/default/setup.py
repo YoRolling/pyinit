@@ -9,7 +9,7 @@ except IOError:
 setup(
     name="{{name}}",
     version="{{version}}",
-    description="A pip package",
+    description="{{description}}",
     license="{{license}}",
     author="{{author}}",
     packages=find_packages(),

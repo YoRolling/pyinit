@@ -22,7 +22,7 @@ questions = [
         'type': 'input',
         'name': 'name',
         'message': 'package name: ',
-        'default': 'myModule'
+        'default':  os.path.basename(os.getcwd()).decode('utf-8')
     },
     {
         'type': 'confirm',
@@ -82,6 +82,7 @@ def create(ctx, template):
         ctx.abort()
 
     isMerge = config.pop('isMerge', True)
+
     if isMerge is True:
         configJson = json.dumps(config, sort_keys=False,
                                 indent=4, separators=(',', ':'))
@@ -91,16 +92,43 @@ def create(ctx, template):
         if isOk is True:
             name = config.get('name')
 
-            if not os.path.exists(name) or (os.path.exists(name) and os.path.isfile(name)):
-                os.mkdir(name)
-
-            os.chdir(name)
-
             if not os.path.exists('%s' % (name)):
                 os.mkdir(name)
 
             with open('%s/.gitkeep' % name, 'w'):
                 pass
 
-            dir_util.copy_tree(os.path.join(
-                os.path.dirname(__file__), '../templates/%s/' % template), './', False)
+            # copy template to cwd
+            try:
+                cwd = os.path.dirname(__file__)
+                src = os.path.join(cwd, '../templates/%s/' % template)
+                dir_util.copy_tree(src, './', False)
+            except:
+                pass
+            finally:
+                pass
+                # @todo  manully copy template
+
+            # generate LICENSE file
+            with open('./LICENSE', 'w') as f:
+                args = ['licen', '-f', config.get('author'), config['license']]
+                licenseContent = check_output(args)
+                f.write(licenseContent)
+
+            with open('./README.md', 'r') as f:
+                content = f.read()
+                reg = r'\{\{(.*?)\}\}'
+                content = re.sub(reg, lambda m: config.get(
+                    m.groups()[0], ''), content, flags=re.IGNORECASE)
+
+            with open('./README.md', 'w') as f:
+                f.write(content)
+
+            with open('./setup.py', 'r') as f:
+                content = f.read()
+                reg = r'\{\{(.*?)\}\}'
+                content = re.sub(reg, lambda m: config.get(
+                    m.groups()[0], ''), content, flags=re.IGNORECASE)
+
+            with open('./setup.py', 'w') as f:
+                f.write(content)

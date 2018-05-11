@@ -1,14 +1,14 @@
-{{moduleName}}
+{{name}}
 ========
 
-{{moduleName}} will solve your problem of where to start with documentation,
+{{name}} will solve your problem of where to start with documentation,
 by providing a basic explanation of how to do it easily.
 aaaa
 Look how easy it is to use:
 
-    import project
+    import {{name}}
     # Get your stuff done
-    project.do_stuff()
+    {{name}}.do_stuff()
 
 Features
 --------
@@ -19,15 +19,15 @@ Features
 Installation
 ------------
 
-Install {{moduleName}} by running:
+Install {{name}} by running:
 
-    pip install project
+    pip install {{name}}
 
 Contribute
 ----------
 
-- Issue Tracker: github.com/{{author}}/{{moduleName}}/issues
-- Source Code: github.com/{{author}}/{{moduleName}}
+- Issue Tracker: github.com/{{author}}/{{name}}/issues
+- Source Code: github.com/{{author}}/{{name}}
 
 Support
 -------
