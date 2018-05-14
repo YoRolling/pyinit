@@ -8,13 +8,14 @@ except IOError:
 
 setup(
     name="pyinit",
-    version="0.1.0",
-    description="A pip package",
+    version="1.0.0",
+    description="a command line tool to help you build python packages",
     license="MIT",
     author="YoRolling",
     packages=find_packages(),
     install_requires=[
-        'Click'
+        'Click',
+        'whaaaaat'
     ],
     long_description=long_description,
     classifiers=[
