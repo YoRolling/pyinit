@@ -1,46 +1,53 @@
 Pyinit
 ========
 
-`Pyinit` will help you to easily create a package folder and init some basic config.
+`Pyinit` 用于自动初始化包结构。
 
-Look how easy it is to use:
-
-```shell
-pyinit create
+```zsh
+{{module_name}}
+├── LICENSEz
+├── README.md
+├── conf.py
+├── docs
+├── {{modue_name}}
+├── setup.py
+└── test
 ```
 
-Features
+特色
 --------
 
-- Be awesome
-- Make package easily
-- Use template recommend by 
+· 基于命令行
 
-Installation
-------------
+· 使用简单
 
-Install pyinit by running:
+· 使用[Kenneth Reitz](http://kennethreitz.org/)推荐的方案
 
-    pip install pyinit
+安装方法
+--------
 
-Usage
-------------
-It's too easy to use, all you need is run `pyinit create` and answer some question 。    
-That's all done！
+```python
+pip install pyinit
+```
+
+使用方法
+--------
+
+在终端中运行 `pyinit create`, 填写一些信息即可根据信息自动生成。
+
+TODO
+--------
+
+- [ ] 自定义模板
+- [ ] git cli 集成
 
 Contribute
-----------
+--------
 
 - Issue Tracker: https://github.com/YoRolling/pyinit/issues
 - Source Code: https://github.com/YoRolling/pyinit
 
-Support
--------
-
-If you are having issues, please let us know.  
-PR & Issues is Welcome.
-
 License
--------
+--------
 
-The project is licensed under the BSD license.
+The project is licensed under the MIT license.
